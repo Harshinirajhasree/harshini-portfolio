@@ -284,15 +284,17 @@ body {
 .contact-item a:hover {
   text-decoration: underline;
 }
-/* WORKSHOP PDF CERTIFICATES — HORIZONTAL A4 */
-.workshop-certificate iframe {
-  width: 100%;
-  height: 260px;           /* shorter height for landscape */
-  border: none;
-  border-radius: 12px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+/* WORKSHOP GRID – PARALLEL CARDS */
+.workshop-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* two parallel boxes */
+  gap: 40px;
+  margin-top: 30px;
 }
 
-.pdf-btn:hover {
-  background: #0f172a;
+/* Responsive: stack on small screens */
+@media (max-width: 900px) {
+  .workshop-grid {
+    grid-template-columns: 1fr;
+  }
 }
