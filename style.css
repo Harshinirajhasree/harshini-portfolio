@@ -298,3 +298,15 @@ body {
     grid-template-columns: 1fr;
   }
 }
+/* FORCE WORKSHOPS SIDE BY SIDE */
+.workshop-grid {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 40px !important;
+}
+
+@media (max-width: 900px) {
+  .workshop-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
