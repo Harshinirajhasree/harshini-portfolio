@@ -9,82 +9,130 @@
 <body>
 
 <!-- SVG ANIMATED BACKGROUND -->
-<!-- HIGH-CONTRAST ANIMATED SVG BACKGROUND -->
-<svg 
-  viewBox="0 0 1000 1000" 
+<!-- DNA + ECG ANIMATED SVG BACKGROUND -->
+<svg
+  viewBox="0 0 1200 800"
   preserveAspectRatio="xMidYMid slice"
   style="position:fixed; inset:0; width:100%; height:100%; z-index:-1;"
 >
 
-  <!-- DEFINITIONS FOR GLOW -->
+  <!-- ===== GLOW DEFINITIONS ===== -->
   <defs>
     <filter id="glow">
-      <feGaussianBlur stdDeviation="6" result="coloredBlur"/>
+      <feGaussianBlur stdDeviation="4" result="blur"/>
       <feMerge>
-        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="blur"/>
         <feMergeNode in="SourceGraphic"/>
       </feMerge>
     </filter>
   </defs>
 
-  <!-- FLOATING PARTICLES -->
-  <circle cx="200" cy="300" r="7" fill="#0284c7" opacity="0.85" filter="url(#glow)">
-    <animateTransform
-      attributeName="transform"
-      type="translate"
-      from="0 0"
-      to="0 -60"
-      dur="4s"
-      repeatCount="indefinite"
-      direction="alternate"
-    />
-  </circle>
+  <!-- ================= DNA HELIX (LEFT) ================= -->
 
-  <circle cx="600" cy="500" r="6" fill="#0369a1" opacity="0.8" filter="url(#glow)">
-    <animateTransform
-      attributeName="transform"
-      type="translate"
-      from="0 0"
-      to="50 40"
-      dur="5s"
-      repeatCount="indefinite"
-      direction="alternate"
-    />
-  </circle>
-
-  <circle cx="800" cy="200" r="6" fill="#0284c7" opacity="0.85" filter="url(#glow)">
-    <animateTransform
-      attributeName="transform"
-      type="translate"
-      from="0 0"
-      to="-50 30"
-      dur="6s"
-      repeatCount="indefinite"
-      direction="alternate"
-    />
-  </circle>
-
-  <!-- DNA / MEDICAL WAVE -->
+  <!-- Strand 1 -->
   <path
-    d="M100 500 Q300 300 500 500 T900 500"
+    d="M200 100 
+       C 260 200, 140 300, 200 400
+       C 260 500, 140 600, 200 700"
     fill="none"
     stroke="#1d4ed8"
     stroke-width="4"
-    opacity="0.85"
+    opacity="0.9"
     filter="url(#glow)"
   >
     <animate
       attributeName="stroke-dashoffset"
       from="0"
       to="120"
-      dur="2.5s"
+      dur="4s"
       repeatCount="indefinite"
     />
     <animate
       attributeName="stroke-dasharray"
-      from="10 14"
-      to="20 10"
-      dur="2s"
+      from="12 18"
+      to="24 12"
+      dur="3s"
+      repeatCount="indefinite"
+    />
+  </path>
+
+  <!-- Strand 2 -->
+  <path
+    d="M260 100 
+       C 200 200, 320 300, 260 400
+       C 200 500, 320 600, 260 700"
+    fill="none"
+    stroke="#0284c7"
+    stroke-width="4"
+    opacity="0.9"
+    filter="url(#glow)"
+  >
+    <animate
+      attributeName="stroke-dashoffset"
+      from="120"
+      to="0"
+      dur="4s"
+      repeatCount="indefinite"
+    />
+    <animate
+      attributeName="stroke-dasharray"
+      from="12 18"
+      to="24 12"
+      dur="3s"
+      repeatCount="indefinite"
+    />
+  </path>
+
+  <!-- Base-pair dots -->
+  <circle cx="230" cy="150" r="5" fill="#38bdf8" filter="url(#glow)">
+    <animateTransform
+      attributeName="transform"
+      type="translate"
+      from="0 0"
+      to="0 520"
+      dur="6s"
+      repeatCount="indefinite"
+    />
+  </circle>
+
+  <circle cx="230" cy="200" r="5" fill="#38bdf8" filter="url(#glow)">
+    <animateTransform
+      attributeName="transform"
+      type="translate"
+      from="0 0"
+      to="0 520"
+      dur="6s"
+      begin="1.5s"
+      repeatCount="indefinite"
+    />
+  </circle>
+
+  <!-- ================= ECG / HEARTBEAT (RIGHT) ================= -->
+
+  <path
+    d="M700 400 
+       L740 400 
+       L755 360 
+       L770 460 
+       L785 400 
+       L820 400 
+       L840 380 
+       L860 420 
+       L880 400 
+       L980 400"
+    fill="none"
+    stroke="#dc2626"
+    stroke-width="4"
+    opacity="0.9"
+    filter="url(#glow)"
+    stroke-dasharray="300"
+    stroke-dashoffset="300"
+  >
+    <animate
+      attributeName="stroke-dashoffset"
+      from="300"
+      to="0"
+      dur="1.6s"
       repeatCount="indefinite"
     />
   </path>
