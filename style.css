@@ -5,20 +5,43 @@
 }
 
 body {
-  font-family: 'Segoe UI', sans-serif;
+  font-family: "Segoe UI", sans-serif;
+  background: #f8fafc;
   color: #0f172a;
   overflow-x: hidden;
 }
 
-/* CANVAS BACKGROUND */
-#bg {
+/* SVG BACKGROUND */
+.bg-svg {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  z-index: 9999;      /* FORCE TO FRONT */
-  background: black; /* TEMP DEBUG */
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.bg-svg circle {
+  fill: #38bdf8;
+  opacity: 0.4;
+  animation: float 6s ease-in-out infinite alternate;
+}
+
+.bg-svg .dna-path {
+  fill: none;
+  stroke: #60a5fa;
+  stroke-width: 2;
+  opacity: 0.4;
+  animation: pulse 4s infinite;
+}
+
+@keyframes float {
+  from { transform: translateY(0); }
+  to { transform: translateY(-20px); }
+}
+
+@keyframes pulse {
+  0%,100% { stroke-dasharray: 5,10; }
+  50% { stroke-dasharray: 10,5; }
 }
 
 /* HERO */
@@ -31,12 +54,13 @@ body {
 }
 
 .hero h1 {
-  font-size: 3.2rem;
+  font-size: 3rem;
   color: #2563eb;
 }
 
 .hero h2 {
   margin: 15px 0;
+  font-weight: 500;
   color: #334155;
 }
 
@@ -46,8 +70,8 @@ body {
   color: #475569;
 }
 
-/* BUTTONS */
-.nav-buttons {
+/* BUTTON PANEL */
+.button-panel {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px,1fr));
   gap: 18px;
@@ -55,7 +79,7 @@ body {
   background: rgba(241,245,249,0.85);
 }
 
-.nav-buttons button {
+.button-panel button {
   padding: 14px;
   border-radius: 40px;
   border: none;
@@ -67,7 +91,7 @@ body {
   transition: 0.3s;
 }
 
-.nav-buttons button:hover {
+.button-panel button:hover {
   transform: translateY(-3px);
   box-shadow: 0 0 28px rgba(56,189,248,1);
 }
@@ -80,7 +104,7 @@ body {
 
 .content-section {
   display: none;
-  animation: fade 0.6s ease;
+  animation: fade 0.5s ease;
 }
 
 .content-section.active {
@@ -94,6 +118,6 @@ body {
 }
 
 @keyframes fade {
-  from { opacity: 0; transform: translateY(15px); }
+  from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
 }
