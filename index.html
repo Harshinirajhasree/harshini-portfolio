@@ -8,10 +8,11 @@
 </head>
 <body>
 
-<!-- HERO SECTION -->
-<section class="hero" id="home">
-  <div class="dna"></div>
+<!-- ANIMATED BACKGROUND -->
+<canvas id="bg"></canvas>
 
+<!-- HERO -->
+<section class="hero">
   <h1>Harshini Rajha Sree</h1>
   <h2>Biomedical Engineer | Healthcare Technology | Quality & Regulatory Enthusiast</h2>
   <p>
@@ -23,82 +24,87 @@
 
 <!-- BUTTON NAVIGATION -->
 <section class="nav-buttons">
-  <button onclick="goTo('about')">About Me</button>
-  <button onclick="goTo('contact')">Contact Info</button>
-  <button onclick="goTo('academics')">Academic Journey</button>
-  <button onclick="goTo('internships')">Internships</button>
-  <button onclick="goTo('workshops')">Workshops</button>
-  <button onclick="goTo('projects')">Featured Projects</button>
-  <button onclick="goTo('certifications')">Certifications</button>
-  <button onclick="goTo('community')">Community Service</button>
-  <button onclick="goTo('technical')">Technical Expertise</button>
-  <button onclick="goTo('tools')">Software & Tools</button>
-  <button onclick="goTo('interests')">Professional Interests</button>
+  <button onclick="showSection('about')">About Me</button>
+  <button onclick="showSection('contact')">Contact</button>
+  <button onclick="showSection('academics')">Academics</button>
+  <button onclick="showSection('internships')">Internships</button>
+  <button onclick="showSection('workshops')">Workshops</button>
+  <button onclick="showSection('projects')">Projects</button>
+  <button onclick="showSection('certifications')">Certifications</button>
+  <button onclick="showSection('community')">Community</button>
+  <button onclick="showSection('technical')">Technical</button>
+  <button onclick="showSection('tools')">Tools</button>
+  <button onclick="showSection('interests')">Interests</button>
 </section>
 
-<!-- CONTENT SECTIONS -->
-<section id="about" class="content-section">
-  <h3>About Me</h3>
-  <p>Add your introduction here.</p>
-</section>
+<!-- CONTENT -->
+<section class="content-area">
 
-<section id="contact" class="content-section">
-  <h3>Contact Information</h3>
-  <p>Email | Phone | LinkedIn | GitHub</p>
-</section>
+  <div id="about" class="content-section active">
+    <h3>About Me</h3>
+    <p>Add your introduction here.</p>
+  </div>
 
-<section id="academics" class="content-section">
-  <h3>Academic Journey</h3>
-  <p>Add academic details here.</p>
-</section>
+  <div id="contact" class="content-section">
+    <h3>Contact</h3>
+    <p>Email | LinkedIn | GitHub</p>
+  </div>
 
-<section id="internships" class="content-section">
-  <h3>Internship Journey</h3>
-  <p>Add internship description + certificate.</p>
-</section>
+  <div id="academics" class="content-section">
+    <h3>Academic Journey</h3>
+    <p>Academic details here.</p>
+  </div>
 
-<section id="workshops" class="content-section">
-  <h3>Workshops</h3>
-  <p>Add workshops + certificates.</p>
-</section>
+  <div id="internships" class="content-section">
+    <h3>Internships</h3>
+    <p>Internship experience + certificates.</p>
+  </div>
 
-<section id="projects" class="content-section">
-  <h3>Featured Projects</h3>
-  <p>Add project images and descriptions.</p>
-</section>
+  <div id="workshops" class="content-section">
+    <h3>Workshops</h3>
+    <p>Workshop details.</p>
+  </div>
 
-<section id="certifications" class="content-section">
-  <h3>Certification Courses</h3>
-  <p>Add course certificates.</p>
-</section>
+  <div id="projects" class="content-section">
+    <h3>Projects</h3>
+    <p>Projects with images.</p>
+  </div>
 
-<section id="community" class="content-section">
-  <h3>Community Service</h3>
-  <p>Add service activities + certificates.</p>
-</section>
+  <div id="certifications" class="content-section">
+    <h3>Certifications</h3>
+    <p>Certifications list.</p>
+  </div>
 
-<section id="technical" class="content-section">
-  <h3>Technical Expertise</h3>
-  <p>List biomedical and technical skills.</p>
-</section>
+  <div id="community" class="content-section">
+    <h3>Community Service</h3>
+    <p>Community service activities.</p>
+  </div>
 
-<section id="tools" class="content-section">
-  <h3>Software & Tools</h3>
-  <p>List software and tools.</p>
-</section>
+  <div id="technical" class="content-section">
+    <h3>Technical Expertise</h3>
+    <p>Technical skills.</p>
+  </div>
 
-<section id="interests" class="content-section">
-  <h3>Professional Interests</h3>
-  <p>Add professional interests.</p>
+  <div id="tools" class="content-section">
+    <h3>Software & Tools</h3>
+    <p>Tools used.</p>
+  </div>
+
+  <div id="interests" class="content-section">
+    <h3>Professional Interests</h3>
+    <p>Professional interests.</p>
+  </div>
+
 </section>
 
 <script>
-  function goTo(sectionId) {
-    document.getElementById(sectionId).scrollIntoView({
-      behavior: 'smooth'
-    });
-  }
+function showSection(id) {
+  document.querySelectorAll('.content-section').forEach(s => s.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+}
 </script>
+
+<script src="particles.js"></script>
 
 </body>
 </html>
