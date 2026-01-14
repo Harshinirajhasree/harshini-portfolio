@@ -95,13 +95,15 @@
     <p>Professional interests.</p>
   </div>
 
-</section>
-
 <script>
-function showSection(id) {
-  document.querySelectorAll('.content-section').forEach(s => s.classList.remove('active'));
-  document.getElementById(id).classList.add('active');
-}
+  function showSection(id) {
+    document.querySelectorAll('.content-section').forEach(s =>
+      s.classList.remove('active')
+    );
+    document.getElementById(id).classList.add('active');
+  }
+
+  console.log("Particles script loaded");
 </script>
 
 <script src="particles.js"></script>
