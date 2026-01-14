@@ -1,45 +1,45 @@
 const canvas = document.getElementById("bg");
 const ctx = canvas.getContext("2d");
 
-function resizeCanvas() {
+function resize() {
   canvas.width = window.innerWidth;
   canvas.height = window.innerHeight;
 }
 
-resizeCanvas();
-window.addEventListener("resize", resizeCanvas);
+resize();
+window.addEventListener("resize", resize);
 
 const particles = [];
-const PARTICLE_COUNT = 100;
+const COUNT = 120;
 
 class Particle {
   constructor() {
     this.x = Math.random() * canvas.width;
     this.y = Math.random() * canvas.height;
-    this.radius = Math.random() * 2 + 1;
-    this.vx = (Math.random() - 0.5) * 0.6;
-    this.vy = (Math.random() - 0.5) * 0.6;
+    this.r = Math.random() * 2 + 1;
+    this.dx = (Math.random() - 0.5) * 0.4;
+    this.dy = (Math.random() - 0.5) * 0.4;
   }
 
   draw() {
     ctx.beginPath();
-    ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
-    ctx.fillStyle = "rgba(56,189,248,0.8)";
+    ctx.arc(this.x, this.y, this.r, 0, Math.PI * 2);
+    ctx.fillStyle = "rgba(56,189,248,0.85)";
     ctx.fill();
   }
 
   update() {
-    this.x += this.vx;
-    this.y += this.vy;
+    this.x += this.dx;
+    this.y += this.dy;
 
-    if (this.x < 0 || this.x > canvas.width) this.vx *= -1;
-    if (this.y < 0 || this.y > canvas.height) this.vy *= -1;
+    if (this.x < 0 || this.x > canvas.width) this.dx *= -1;
+    if (this.y < 0 || this.y > canvas.height) this.dy *= -1;
 
     this.draw();
   }
 }
 
-for (let i = 0; i < PARTICLE_COUNT; i++) {
+for (let i = 0; i < COUNT; i++) {
   particles.push(new Particle());
 }
 
