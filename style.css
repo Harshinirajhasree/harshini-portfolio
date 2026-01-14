@@ -141,3 +141,27 @@ body {
 .about-text {
   max-width: 700px;
 }
+/* ACADEMIC JOURNEY */
+.academic-item {
+  margin-bottom: 30px;
+  padding-left: 20px;
+  border-left: 4px solid #1d4ed8;
+}
+
+.academic-item h4 {
+  font-size: 1.2rem;
+  color: #1d4ed8;
+  margin-bottom: 5px;
+}
+
+.academic-item span {
+  font-size: 0.95rem;
+  color: #475569;
+  font-weight: 500;
+}
+
+.academic-item p {
+  margin-top: 8px;
+  color: #334155;
+  line-height: 1.6;
+}
