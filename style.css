@@ -284,3 +284,15 @@ body {
 .contact-item a:hover {
   text-decoration: underline;
 }
+/* WORKSHOP PDF CERTIFICATES — HORIZONTAL A4 */
+.workshop-certificate iframe {
+  width: 100%;
+  height: 260px;           /* shorter height for landscape */
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.pdf-btn:hover {
+  background: #0f172a;
+}
