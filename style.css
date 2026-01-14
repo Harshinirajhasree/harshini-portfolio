@@ -301,3 +301,9 @@ body {
   transform: translateY(-6px);
   transition: transform 0.3s ease;
 }
+.workshop-grid {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 50px !important;   /* space between boxes */
+  margin-top: 40px;
+}
