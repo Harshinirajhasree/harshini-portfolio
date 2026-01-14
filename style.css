@@ -165,3 +165,65 @@ body {
   color: #334155;
   line-height: 1.6;
 }
+/* INTERNSHIP GRID */
+.internship-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin-top: 30px;
+}
+
+/* INTERNSHIP CARD */
+.internship-card {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 16px;
+  padding: 25px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.internship-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 22px 45px rgba(0, 0, 0, 0.15);
+}
+
+.internship-card h4 {
+  font-size: 1.25rem;
+  color: #1d4ed8;
+  margin-bottom: 6px;
+}
+
+.org-name {
+  display: block;
+  font-size: 0.95rem;
+  color: #475569;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+/* CERTIFICATE PLACEHOLDER */
+.internship-certificate {
+  width: 100%;
+  height: 160px;
+  border: 2px dashed #93c5fd;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
+  background: #f8fafc;
+  color: #64748b;
+  font-size: 0.95rem;
+}
+
+/* BULLET POINTS */
+.internship-points {
+  padding-left: 18px;
+}
+
+.internship-points li {
+  margin-bottom: 10px;
+  color: #334155;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
