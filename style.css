@@ -6,8 +6,16 @@
 
 body {
   font-family: 'Segoe UI', sans-serif;
-  background: #f8fafc;
   color: #0f172a;
+  overflow-x: hidden;
+}
+
+/* CANVAS BACKGROUND */
+#bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
 }
 
 /* HERO */
@@ -15,9 +23,8 @@ body {
   min-height: 100vh;
   text-align: center;
   padding: 120px 20px 80px;
-  background: white;
-  position: relative;
-  overflow: hidden;
+  background: rgba(255,255,255,0.75);
+  backdrop-filter: blur(6px);
 }
 
 .hero h1 {
@@ -28,7 +35,6 @@ body {
 .hero h2 {
   margin: 15px 0;
   color: #334155;
-  font-weight: 500;
 }
 
 .hero p {
@@ -37,32 +43,13 @@ body {
   color: #475569;
 }
 
-/* DNA ANIMATION */
-.dna {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 180px;
-  height: 180px;
-  border: 3px dashed #93c5fd;
-  border-radius: 50%;
-  animation: spin 12s linear infinite;
-  opacity: 0.25;
-  transform: translate(-50%, -50%);
-}
-
-@keyframes spin {
-  from { transform: translate(-50%, -50%) rotate(0deg); }
-  to { transform: translate(-50%, -50%) rotate(360deg); }
-}
-
-/* NAV BUTTONS */
+/* BUTTONS */
 .nav-buttons {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(180px,1fr));
   gap: 18px;
   padding: 60px 10%;
-  background: #f1f5f9;
+  background: rgba(241,245,249,0.85);
 }
 
 .nav-buttons button {
@@ -71,22 +58,30 @@ body {
   border: none;
   font-weight: 600;
   cursor: pointer;
-  background: linear-gradient(135deg, #e0f2fe, #bae6fd);
+  background: linear-gradient(135deg,#e0f2fe,#bae6fd);
   color: #2563eb;
+  box-shadow: 0 0 18px rgba(56,189,248,0.7);
   transition: 0.3s;
-  box-shadow: 0 0 12px rgba(56,189,248,0.5);
 }
 
 .nav-buttons button:hover {
   transform: translateY(-3px);
-  box-shadow: 0 0 22px rgba(56,189,248,0.9);
+  box-shadow: 0 0 28px rgba(56,189,248,1);
 }
 
-/* CONTENT SECTIONS */
+/* CONTENT */
+.content-area {
+  padding: 80px 10%;
+  background: rgba(255,255,255,0.85);
+}
+
 .content-section {
-  padding: 90px 10%;
-  background: white;
-  border-bottom: 1px solid #e5e7eb;
+  display: none;
+  animation: fade 0.6s ease;
+}
+
+.content-section.active {
+  display: block;
 }
 
 .content-section h3 {
@@ -95,7 +90,7 @@ body {
   margin-bottom: 15px;
 }
 
-.content-section p {
-  color: #475569;
-  max-width: 900px;
+@keyframes fade {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
 }
