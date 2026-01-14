@@ -8,164 +8,97 @@
 </head>
 <body>
 
-<!-- NAVBAR -->
-<nav class="navbar">
-  <div class="nav-container">
-    <a href="#home" class="nav-btn">Home</a>
-    <a href="#about" class="nav-btn">About</a>
-    <a href="#academics" class="nav-btn">Academics</a>
-    <a href="#internships" class="nav-btn">Internships</a>
-    <a href="#projects" class="nav-btn">Projects</a>
-    <a href="#contact" class="nav-btn">Contact</a>
-  </div>
-</nav>
-
-<!-- 1. HERO SECTION -->
+<!-- HERO SECTION -->
 <section class="hero" id="home">
-  <div class="hero-content">
-    <h1>Harshini Rajha Sree</h1>
-    <h2>Biomedical Engineer | Healthcare Technology | Quality & Regulatory Enthusiast</h2>
-    <p>
-      Motivated biomedical engineer with a strong interest in healthcare innovation,
-      medical devices, and regulatory compliance. Passionate about contributing to safe,
-      effective, and impactful healthcare solutions that improve patient care.
-    </p>
-  </div>
+  <div class="dna"></div>
+
+  <h1>Harshini Rajha Sree</h1>
+  <h2>Biomedical Engineer | Healthcare Technology | Quality & Regulatory Enthusiast</h2>
+  <p>
+    Motivated biomedical engineer passionate about healthcare innovation,
+    medical devices, and regulatory compliance. Eager to apply cutting-edge
+    technologies that directly improve patient care and healthcare outcomes.
+  </p>
 </section>
 
-<!-- 2. ABOUT ME -->
-<section class="section about" id="about">
-  <div class="container about-container">
-    <img src="assets/profile.jpg" class="profile-img" alt="Profile Photo">
-    <div>
-      <h3 class="section-title">About Me</h3>
-      <p>
-        I am Harshini Rajha Sree, a third-year Biomedical Engineering student at
-        SRM Institute of Science and Technology (SRMIST). I am passionate about advancing
-        healthcare innovation through hands-on experience gained from internships in
-        hospitals and medical technology companies. I am eager to learn and apply
-        cutting-edge technologies that directly improve patient care and healthcare outcomes.
-      </p>
-    </div>
-  </div>
+<!-- BUTTON NAVIGATION -->
+<section class="nav-buttons">
+  <button onclick="goTo('about')">About Me</button>
+  <button onclick="goTo('contact')">Contact Info</button>
+  <button onclick="goTo('academics')">Academic Journey</button>
+  <button onclick="goTo('internships')">Internships</button>
+  <button onclick="goTo('workshops')">Workshops</button>
+  <button onclick="goTo('projects')">Featured Projects</button>
+  <button onclick="goTo('certifications')">Certifications</button>
+  <button onclick="goTo('community')">Community Service</button>
+  <button onclick="goTo('technical')">Technical Expertise</button>
+  <button onclick="goTo('tools')">Software & Tools</button>
+  <button onclick="goTo('interests')">Professional Interests</button>
 </section>
 
-<!-- 3. CONTACT INFO -->
-<section class="section light" id="contact">
-  <div class="container">
-    <h3 class="section-title">Contact Information</h3>
-    <p>Email: yourmail@example.com</p>
-    <p>Phone: +91 XXXXX XXXXX</p>
-    <p>LinkedIn: linkedin.com/in/yourprofile</p>
-    <p>GitHub: github.com/yourusername</p>
-  </div>
+<!-- CONTENT SECTIONS -->
+<section id="about" class="content-section">
+  <h3>About Me</h3>
+  <p>Add your introduction here.</p>
 </section>
 
-<!-- 4. ACADEMIC JOURNEY -->
-<section class="section" id="academics">
-  <div class="container">
-    <h3 class="section-title">Academic Journey</h3>
-    <ul class="list">
-      <li>B.Tech Biomedical Engineering – SRMIST (2022 – Present)</li>
-      <li>Relevant coursework: Biomedical Instrumentation, Medical Devices, Signals & Systems</li>
-    </ul>
-  </div>
+<section id="contact" class="content-section">
+  <h3>Contact Information</h3>
+  <p>Email | Phone | LinkedIn | GitHub</p>
 </section>
 
-<!-- 5. INTERNSHIP JOURNEY -->
-<section class="section light" id="internships">
-  <div class="container">
-    <h3 class="section-title">Internship Experience</h3>
-    <div class="card">
-      <h4>Hospital / Medical Technology Internship</h4>
-      <p>Description of your role, learning, and exposure.</p>
-      <p><strong>Certificate:</strong> Upload & link later</p>
-    </div>
-  </div>
+<section id="academics" class="content-section">
+  <h3>Academic Journey</h3>
+  <p>Add academic details here.</p>
 </section>
 
-<!-- 6. WORKSHOPS -->
-<section class="section">
-  <div class="container">
-    <h3 class="section-title">Workshops</h3>
-    <div class="card">
-      <p>Workshop title – brief description</p>
-      <p><strong>Certificate:</strong> Upload & link later</p>
-    </div>
-  </div>
+<section id="internships" class="content-section">
+  <h3>Internship Journey</h3>
+  <p>Add internship description + certificate.</p>
 </section>
 
-<!-- 7. FEATURED PROJECTS -->
-<section class="section light" id="projects">
-  <div class="container">
-    <h3 class="section-title">Featured Projects</h3>
-    <div class="card">
-      <h4>Project Title</h4>
-      <p>Short description of the project and technologies used.</p>
-      <p>Image placeholder (add later)</p>
-    </div>
-  </div>
+<section id="workshops" class="content-section">
+  <h3>Workshops</h3>
+  <p>Add workshops + certificates.</p>
 </section>
 
-<!-- 8. CERTIFICATION COURSES -->
-<section class="section">
-  <div class="container">
-    <h3 class="section-title">Certification Courses</h3>
-    <div class="card">
-      <p>Course name – platform</p>
-      <p><strong>Certificate:</strong> Upload & link later</p>
-    </div>
-  </div>
+<section id="projects" class="content-section">
+  <h3>Featured Projects</h3>
+  <p>Add project images and descriptions.</p>
 </section>
 
-<!-- 9. COMMUNITY SERVICE -->
-<section class="section light">
-  <div class="container">
-    <h3 class="section-title">Community Service</h3>
-    <div class="card">
-      <p>Description of service activity</p>
-      <p><strong>Certificate:</strong> Upload & link later</p>
-    </div>
-  </div>
+<section id="certifications" class="content-section">
+  <h3>Certification Courses</h3>
+  <p>Add course certificates.</p>
 </section>
 
-<!-- 10. TECHNICAL EXPERTISE -->
-<section class="section">
-  <div class="container">
-    <h3 class="section-title">Technical Expertise</h3>
-    <ul class="list">
-      <li>Biomedical Instrumentation</li>
-      <li>Medical Devices</li>
-      <li>Healthcare Technology</li>
-      <li>Quality & Regulatory Basics</li>
-    </ul>
-  </div>
+<section id="community" class="content-section">
+  <h3>Community Service</h3>
+  <p>Add service activities + certificates.</p>
 </section>
 
-<!-- 11. SOFTWARE & TOOLS -->
-<section class="section light">
-  <div class="container">
-    <h3 class="section-title">Software & Tools</h3>
-    <ul class="list">
-      <li>MATLAB</li>
-      <li>Python</li>
-      <li>Arduino</li>
-      <li>MS Office</li>
-    </ul>
-  </div>
+<section id="technical" class="content-section">
+  <h3>Technical Expertise</h3>
+  <p>List biomedical and technical skills.</p>
 </section>
 
-<!-- 12. PROFESSIONAL INTERESTS -->
-<section class="section">
-  <div class="container">
-    <h3 class="section-title">Professional Interests</h3>
-    <ul class="list">
-      <li>Medical Devices & Healthcare Innovation</li>
-      <li>Quality Assurance & Regulatory Affairs</li>
-      <li>Assistive & Patient-Centered Technologies</li>
-    </ul>
-  </div>
+<section id="tools" class="content-section">
+  <h3>Software & Tools</h3>
+  <p>List software and tools.</p>
 </section>
+
+<section id="interests" class="content-section">
+  <h3>Professional Interests</h3>
+  <p>Add professional interests.</p>
+</section>
+
+<script>
+  function goTo(sectionId) {
+    document.getElementById(sectionId).scrollIntoView({
+      behavior: 'smooth'
+    });
+  }
+</script>
 
 </body>
 </html>
