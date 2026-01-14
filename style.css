@@ -17,8 +17,8 @@ body {
   left: 0;
   width: 100vw;
   height: 100vh;
-  z-index: -10;
-  background: transparent;
+  z-index: 9999;      /* FORCE TO FRONT */
+  background: black; /* TEMP DEBUG */
 }
 
 /* HERO */
