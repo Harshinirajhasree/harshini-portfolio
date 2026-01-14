@@ -1,15 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Harshini Rajha Sree | Biomedical Portfolio</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-<!-- ANIMATED BACKGROUND -->
-<canvas id="bg"></canvas>
+<!-- SVG ANIMATED BACKGROUND -->
+<svg class="bg-svg" viewBox="0 0 1000 1000" preserveAspectRatio="xMidYMid slice">
+  <circle cx="200" cy="300" r="4"/>
+  <circle cx="600" cy="200" r="3"/>
+  <circle cx="800" cy="700" r="5"/>
+  <circle cx="400" cy="800" r="3"/>
+  <path d="M100 500 Q300 300 500 500 T900 500" class="dna-path"/>
+</svg>
 
 <!-- HERO -->
 <section class="hero">
@@ -17,95 +23,93 @@
   <h2>Biomedical Engineer | Healthcare Technology | Quality & Regulatory Enthusiast</h2>
   <p>
     Motivated biomedical engineer passionate about healthcare innovation,
-    medical devices, and regulatory compliance. Eager to apply cutting-edge
-    technologies that directly improve patient care and healthcare outcomes.
+    medical devices, and regulatory compliance. Eager to learn and apply
+    cutting-edge technologies that directly improve patient care and outcomes.
   </p>
 </section>
 
 <!-- BUTTON NAVIGATION -->
-<section class="nav-buttons">
+<section class="button-panel">
   <button onclick="showSection('about')">About Me</button>
-  <button onclick="showSection('contact')">Contact</button>
-  <button onclick="showSection('academics')">Academics</button>
+  <button onclick="showSection('contact')">Contact Info</button>
+  <button onclick="showSection('academics')">Academic Journey</button>
   <button onclick="showSection('internships')">Internships</button>
   <button onclick="showSection('workshops')">Workshops</button>
-  <button onclick="showSection('projects')">Projects</button>
+  <button onclick="showSection('projects')">Featured Projects</button>
   <button onclick="showSection('certifications')">Certifications</button>
-  <button onclick="showSection('community')">Community</button>
-  <button onclick="showSection('technical')">Technical</button>
-  <button onclick="showSection('tools')">Tools</button>
-  <button onclick="showSection('interests')">Interests</button>
+  <button onclick="showSection('community')">Community Service</button>
+  <button onclick="showSection('technical')">Technical Expertise</button>
+  <button onclick="showSection('tools')">Software & Tools</button>
+  <button onclick="showSection('interests')">Professional Interests</button>
 </section>
 
-<!-- CONTENT -->
+<!-- CONTENT SECTIONS -->
 <section class="content-area">
 
-  <div id="about" class="content-section active">
+  <div id="about" class="content-section">
     <h3>About Me</h3>
-    <p>Add your introduction here.</p>
+    <p>Add your introduction, photo, and details here.</p>
   </div>
 
   <div id="contact" class="content-section">
-    <h3>Contact</h3>
-    <p>Email | LinkedIn | GitHub</p>
+    <h3>Contact Information</h3>
+    <p>Email | Phone | LinkedIn | GitHub</p>
   </div>
 
   <div id="academics" class="content-section">
     <h3>Academic Journey</h3>
-    <p>Academic details here.</p>
+    <p>Add your academic timeline here.</p>
   </div>
 
   <div id="internships" class="content-section">
-    <h3>Internships</h3>
-    <p>Internship experience + certificates.</p>
+    <h3>Internship Journey</h3>
+    <p>Add internship description and certificates.</p>
   </div>
 
   <div id="workshops" class="content-section">
     <h3>Workshops</h3>
-    <p>Workshop details.</p>
+    <p>Add workshop details and certificates.</p>
   </div>
 
   <div id="projects" class="content-section">
-    <h3>Projects</h3>
-    <p>Projects with images.</p>
+    <h3>Featured Projects</h3>
+    <p>Add project images and descriptions.</p>
   </div>
 
   <div id="certifications" class="content-section">
-    <h3>Certifications</h3>
-    <p>Certifications list.</p>
+    <h3>Certification Courses</h3>
+    <p>Add certifications here.</p>
   </div>
 
   <div id="community" class="content-section">
     <h3>Community Service</h3>
-    <p>Community service activities.</p>
+    <p>Add community service details.</p>
   </div>
 
   <div id="technical" class="content-section">
     <h3>Technical Expertise</h3>
-    <p>Technical skills.</p>
+    <p>Add technical skills here.</p>
   </div>
 
   <div id="tools" class="content-section">
     <h3>Software & Tools</h3>
-    <p>Tools used.</p>
+    <p>Add tools and software here.</p>
   </div>
 
   <div id="interests" class="content-section">
     <h3>Professional Interests</h3>
-    <p>Professional interests.</p>
+    <p>Add professional interests here.</p>
   </div>
+
+</section>
+
 <script>
-  function showSection(id) {
-    document.querySelectorAll('.content-section').forEach(s =>
-      s.classList.remove('active')
-    );
-    document.getElementById(id).classList.add('active');
-  }
-
-  console.log("Main JS loaded");
+function showSection(id) {
+  document.querySelectorAll('.content-section')
+    .forEach(sec => sec.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+}
 </script>
-
-<script src="particles.js"></script>
 
 </body>
 </html>
