@@ -9,17 +9,17 @@
 <body>
 
 <!-- SVG ANIMATED BACKGROUND -->
-<!-- DNA + ECG ANIMATED SVG BACKGROUND -->
+<!-- DARKER DNA + ECG ANIMATED SVG BACKGROUND -->
 <svg
   viewBox="0 0 1200 800"
   preserveAspectRatio="xMidYMid slice"
   style="position:fixed; inset:0; width:100%; height:100%; z-index:-1;"
 >
 
-  <!-- ===== GLOW DEFINITIONS ===== -->
+  <!-- ===== STRONG GLOW ===== -->
   <defs>
     <filter id="glow">
-      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feGaussianBlur stdDeviation="6" result="blur"/>
       <feMerge>
         <feMergeNode in="blur"/>
         <feMergeNode in="SourceGraphic"/>
@@ -35,9 +35,9 @@
        C 260 200, 140 300, 200 400
        C 260 500, 140 600, 200 700"
     fill="none"
-    stroke="#1d4ed8"
-    stroke-width="4"
-    opacity="0.9"
+    stroke="#0f172a"
+    stroke-width="5"
+    opacity="1"
     filter="url(#glow)"
   >
     <animate
@@ -49,8 +49,8 @@
     />
     <animate
       attributeName="stroke-dasharray"
-      from="12 18"
-      to="24 12"
+      from="14 18"
+      to="28 14"
       dur="3s"
       repeatCount="indefinite"
     />
@@ -62,9 +62,9 @@
        C 200 200, 320 300, 260 400
        C 200 500, 320 600, 260 700"
     fill="none"
-    stroke="#0284c7"
-    stroke-width="4"
-    opacity="0.9"
+    stroke="#1d4ed8"
+    stroke-width="5"
+    opacity="1"
     filter="url(#glow)"
   >
     <animate
@@ -76,15 +76,15 @@
     />
     <animate
       attributeName="stroke-dasharray"
-      from="12 18"
-      to="24 12"
+      from="14 18"
+      to="28 14"
       dur="3s"
       repeatCount="indefinite"
     />
   </path>
 
   <!-- Base-pair dots -->
-  <circle cx="230" cy="150" r="5" fill="#38bdf8" filter="url(#glow)">
+  <circle cx="230" cy="150" r="6" fill="#1e40af" opacity="1" filter="url(#glow)">
     <animateTransform
       attributeName="transform"
       type="translate"
@@ -95,7 +95,7 @@
     />
   </circle>
 
-  <circle cx="230" cy="200" r="5" fill="#38bdf8" filter="url(#glow)">
+  <circle cx="230" cy="220" r="6" fill="#1e40af" opacity="1" filter="url(#glow)">
     <animateTransform
       attributeName="transform"
       type="translate"
@@ -112,27 +112,27 @@
   <path
     d="M700 400 
        L740 400 
-       L755 360 
-       L770 460 
+       L755 350 
+       L770 470 
        L785 400 
        L820 400 
-       L840 380 
-       L860 420 
+       L840 370 
+       L860 430 
        L880 400 
        L980 400"
     fill="none"
-    stroke="#dc2626"
-    stroke-width="4"
-    opacity="0.9"
+    stroke="#7f1d1d"
+    stroke-width="5"
+    opacity="1"
     filter="url(#glow)"
-    stroke-dasharray="300"
-    stroke-dashoffset="300"
+    stroke-dasharray="320"
+    stroke-dashoffset="320"
   >
     <animate
       attributeName="stroke-dashoffset"
-      from="300"
+      from="320"
       to="0"
-      dur="1.6s"
+      dur="1.5s"
       repeatCount="indefinite"
     />
   </path>
