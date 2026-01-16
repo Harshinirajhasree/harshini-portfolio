@@ -389,9 +389,10 @@ body {
 .crop-video {
   width: 100%;
   max-width: 600px;
-  height: 520px;
-  object-fit: contain;
-  object-position: top;
+  height: 520px;          /* MORE vertical space */
+  object-fit: contain;   /* no cropping */
+  object-position: top;  /* pushes content upward */
+  background: #f8fafc;
   border-radius: 14px;
   box-shadow: 0 15px 30px rgba(0,0,0,0.2);
 }
