@@ -480,7 +480,3 @@ body {
     box-shadow: 0 0 22px rgba(56,189,248,0.85);
   }
 }
-/* 🔴 TEST: FORCE GLOW ANIMATION */
-.button-panel button {
-  animation: softGlow 4s ease-in-out infinite !important;
-}
