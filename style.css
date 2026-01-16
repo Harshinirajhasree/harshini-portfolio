@@ -386,3 +386,13 @@ body {
     grid-template-columns: 1fr;
   }
 }
+/* VISUAL CROP FOR VERTICAL VIDEO */
+.crop-video {
+  width: 100%;
+  max-width: 600px;
+  height: 320px;          /* controls how much is visible */
+  object-fit: cover;      /* crops excess top area */
+  object-position: bottom;/* keeps spoon area visible */
+  border-radius: 14px;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
