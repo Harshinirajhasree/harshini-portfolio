@@ -332,6 +332,32 @@ body {
   border-radius: 18px;
   padding: 30px;
 }
+/* PROJECT CARD ANIMATION */
+.internship-card {
+  opacity: 0;
+  transform: translateY(25px);
+  animation: projectFadeUp 0.7s ease forwards;
+}
+
+/* Stagger effect */
+.internship-card:nth-child(1) { animation-delay: 0.1s; }
+.internship-card:nth-child(2) { animation-delay: 0.2s; }
+.internship-card:nth-child(3) { animation-delay: 0.3s; }
+.internship-card:nth-child(4) { animation-delay: 0.4s; }
+
+@keyframes projectFadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Hover effect */
+.internship-card:hover {
+  transform: translateY(-6px) scale(1.01);
+  box-shadow: 0 25px 55px rgba(29,78,216,0.18);
+  transition: 0.3s ease;
+}
 
 /* Responsive */
 @media (max-width: 900px) {
