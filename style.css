@@ -391,7 +391,7 @@ body {
   max-width: 600px;
   height: 420px;
   object-fit: contain;
-  object-position: center;
+  object-position: top;
   border-radius: 14px;
   box-shadow: 0 15px 30px rgba(0,0,0,0.2);
 }
