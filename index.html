@@ -940,9 +940,14 @@
 </section>
 
 <script>
+console.log("JS is running");
+
 function showSection(id) {
+  console.log("Button clicked:", id);
+
   document.querySelectorAll('.content-section')
     .forEach(sec => sec.classList.remove('active'));
+
   document.getElementById(id).classList.add('active');
 }
 </script>
