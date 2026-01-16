@@ -932,15 +932,22 @@
 </section>
 
 <script>
-console.log("JS is running");
-
 function showSection(id) {
-  console.log("Button clicked:", id);
-
   document.querySelectorAll('.content-section')
     .forEach(sec => sec.classList.remove('active'));
 
-  document.getElementById(id).classList.add('active');
+  const section = document.getElementById(id);
+  section.classList.add('active');
+
+  // Restart project animations
+  if (id === 'projects') {
+    const cards = section.querySelectorAll('.internship-card');
+    cards.forEach(card => {
+      card.style.animation = 'none';
+      card.offsetHeight; // trigger reflow
+      card.style.animation = '';
+    });
+  }
 }
 </script>
 
