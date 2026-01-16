@@ -105,7 +105,13 @@ body {
 
 .content-section {
   display: none;
-  animation: fade 0.5s ease;
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.content-section.active {
+  display: block;
+  animation: reveal 0.6s ease-out forwards;
 }
 
 .content-section.active {
@@ -118,9 +124,15 @@ body {
   margin-bottom: 15px;
 }
 
-@keyframes fade {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
+@keyframes reveal {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 /* ABOUT ME LAYOUT */
 .about-container {
