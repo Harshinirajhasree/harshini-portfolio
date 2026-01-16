@@ -1,6 +1,4 @@
-body {
-  border: 10px solid red;
-}
+
 * {
   margin: 0;
   padding: 0;
@@ -462,4 +460,23 @@ body {
   background: #f8fafc;
   border-radius: 14px;
   box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+/* SOFT PULSING GLOW FOR NAV BUTTONS */
+.button-panel button {
+  box-shadow: 0 0 14px rgba(56,189,248,0.5);
+  animation: softGlow 6s ease-in-out infinite;
+}
+
+.button-panel button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 32px rgba(56,189,248,1);
+}
+
+@keyframes softGlow {
+  0%, 100% {
+    box-shadow: 0 0 14px rgba(56,189,248,0.5);
+  }
+  50% {
+    box-shadow: 0 0 22px rgba(56,189,248,0.85);
+  }
 }
