@@ -88,15 +88,25 @@ body {
   cursor: pointer;
   background: linear-gradient(135deg,#e0f2fe,#bae6fd);
   color: #2563eb;
-  box-shadow: 0 0 18px rgba(56,189,248,0.7);
-  transition: 0.3s;
+
+  box-shadow: 0 0 14px rgba(56,189,248,0.5);
+  animation: softGlow 6s ease-in-out infinite;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .button-panel button:hover {
   transform: translateY(-3px);
-  box-shadow: 0 0 28px rgba(56,189,248,1);
+  box-shadow: 0 0 32px rgba(56,189,248,1);
 }
 
+@keyframes softGlow {
+  0%, 100% {
+    box-shadow: 0 0 14px rgba(56,189,248,0.5);
+  }
+  50% {
+    box-shadow: 0 0 22px rgba(56,189,248,0.8);
+  }
+}
 /* CONTENT */
 .content-area {
   padding: 80px 10%;
